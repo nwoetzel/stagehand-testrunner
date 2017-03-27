@@ -90,14 +90,13 @@ services:
 
   # Collector
   collecting_type:
-    scope: prototype
+    shared: false
     class: "%collecting_type.class%"
     calls:
       - [ setLegacyProxy, [ "@legacy_proxy" ] ]
   collecting_type_factory:
     class: "%collecting_type_factory.class%"
-    factory_service: component_aware_factory_factory
-    factory_method: create
+    factory: 'component_aware_factory_factory:create'
     arguments: [ "collecting_type", "%collecting_type_factory.class%" ]
 
   # Core

@@ -76,7 +76,7 @@ class ApplicationContext
     /**
      * @param \Stagehand\TestRunner\Core\ApplicationContext $applicationContext
      */
-    public static function setInstance(ApplicationContext $applicationContext)
+    public static function setInstance(ApplicationContext $applicationContext = null)
     {
         self::$soleInstance = $applicationContext;
     }

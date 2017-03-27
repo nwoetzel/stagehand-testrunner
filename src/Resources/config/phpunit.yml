@@ -74,8 +74,7 @@ services:
   # PHPUnit
   phpunit.phpunit_configuration:
     class: "%phpunit.phpunit_configuration.class%"
-    factory_service: phpunit.phpunit_configuration_factory
-    factory_method: create
+    factory: 'phpunit.phpunit_configuration_factory:create'
   phpunit.phpunit_configuration_factory:
     class: "%phpunit.phpunit_configuration_factory.class%"
     arguments: [ "%phpunit.phpunit_config_file%" ]
